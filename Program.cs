@@ -2,6 +2,7 @@
 using Unit05.Game.Directing;
 using Unit05.Game.Scripting;
 using Unit05.Game.Services;
+using Unit05.Game;
 
 
 namespace Unit05
@@ -18,12 +19,12 @@ namespace Unit05
         static void Main(string[] args)
         {
             // create the cast
-            int x = 1;
-            int y = 2;
+           
             Cast cast = new Cast();
+            
             cast.AddActor("food", new Food());
-            cast.AddActor("snake", new Snake(x));
-            cast.AddActor("snake2", new Snake(y));
+            cast.AddActor("snake", new Snake( Constants.GREEN, Constants.MAX_X/2, Constants.MAX_Y/2 ));
+            cast.AddActor("snake2", new Snake(Constants.RED, Constants.MAX_X/4, Constants.MAX_Y/4));
             cast.AddActor("score", new Score());
 
             // create the services
@@ -35,8 +36,9 @@ namespace Unit05
             script.AddAction("input", new ControlActorsAction(keyboardService));
             script.AddAction("update", new MoveActorsAction());
             script.AddAction("update", new HandleCollisionsAction());
+            script.AddAction("update", new GrowTailAction() );
             script.AddAction("output", new DrawActorsAction(videoService));
-
+            
             // start the game
             Director director = new Director(videoService);
             director.StartGame(cast, script);

@@ -124,6 +124,8 @@ namespace Unit05.Game.Scripting
                     segment.SetColor(Constants.WHITE);
                 }
                 food.SetColor(Constants.WHITE);
+                snake.SetColor(Constants.WHITE);
+                snake2.SetColor(Constants.WHITE);
             }
         }
 
