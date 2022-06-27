@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Unit05
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\caleb\OneDrive\Desktop\C#Repos\Snake\
+=======
+build_property.ProjectDir = C:\CollegeFoldersAndFiles\Spring2022Semester\ProgrammingWithClasses2\Snake\
+>>>>>>> 22bb6dd7cc266c8d8d75187865f9a7eebf27373e

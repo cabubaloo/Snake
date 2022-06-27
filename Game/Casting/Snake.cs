@@ -111,13 +111,14 @@ namespace Unit05.Game.Casting
         {
             int x = Constants.MAX_X / 2;
             int y = Constants.MAX_Y / 2;
+            
 
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
                 string text = i == 0 ? "8" : "#";
-                Color color = i == 0 ? Constants.YELLOW : Constants.GREEN;
+                Color color = i == 0 ? Constants.GREEN : Constants.GREEN;
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);
@@ -127,7 +128,7 @@ namespace Unit05.Game.Casting
                 segments.Add(segment);
             }
         }
-
+//  Prepares the second Snakes body for moving 
         private void PrepareBody2()
         {
             int x = Constants.MAX_X / 4;
@@ -138,7 +139,7 @@ namespace Unit05.Game.Casting
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
                 string text = i == 0 ? "8" : "#";
-                Color color = i == 0 ? Constants.YELLOW : Constants.GREEN;
+                Color color = i == 0 ? Constants.RED : Constants.RED;
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);
@@ -148,5 +149,6 @@ namespace Unit05.Game.Casting
                 segments.Add(segment);
             }
         }
+   
     }
 }
