@@ -77,7 +77,7 @@ namespace Unit05.Game.Casting
                 Actor segment = new Actor();
                 segment.SetPosition(position);
                 segment.SetVelocity(velocity);
-                segment.SetText("#");
+                segment.SetText(">");
                 segment.SetColor(GetColor());
                 segments.Add(segment);
             }
